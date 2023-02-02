@@ -18,5 +18,9 @@ let store = {
   subscribe(observer) {
     this._callSubscriber = observer;
   },
+
+  dispatch(action) {
+    this._state.listPage = listReduser(this._state.listPage, action);
+  },
 };
 export default store;
