@@ -9,5 +9,14 @@ let store = {
       newTaskText: "Add new task...",
     },
   },
+  _callSubscriber() {
+    console.log("State has been changed");
+  },
+  getState() {
+    return this._state;
+  },
+  subscribe(observer) {
+    this._callSubscriber = observer;
+  },
 };
 export default store;
