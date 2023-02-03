@@ -1,4 +1,5 @@
 import { Component } from "react";
+import s from "./List.module.css";
 
 export class List extends Component {
   state = {
@@ -22,10 +23,10 @@ export class List extends Component {
       console.log(items);
     }
   }
-
   markedWord(e) {
     const item = e.target;
-    item.classList.toggle("marked");
+    item.classList.toggle(s.marked);
+    console.log(item);
   }
   render() {
     return (
