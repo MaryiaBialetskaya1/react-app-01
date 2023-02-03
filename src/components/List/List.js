@@ -9,6 +9,12 @@ export class List extends Component {
     this.setState({ input: e });
     console.log(e);
   }
+  addItem(input) {
+    let items = this.state.listItems;
+    items.push(input);
+    this.setState({ listItems: items, input: "" });
+    console.log(items);
+  }
   render() {
     return (
       <div>
@@ -23,7 +29,9 @@ export class List extends Component {
           ></textarea>
         </div>
         <div>
-          <button>Add</button>
+          <button onClick={() => this.addItem(this.state.listItems)}>
+            Add
+          </button>
         </div>
       </div>
     );
