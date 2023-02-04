@@ -23,7 +23,7 @@ export class List extends Component {
       alert("Enter an item. No empty strings.");
     } else {
       let items = this.state.listItems;
-      items.push(input);
+      items.unshift(input);
       this.setState({ listItems: items, input: "" });
       console.log(items);
     }
@@ -59,7 +59,7 @@ export class List extends Component {
               className={s.buttonPublish}
               onClick={() => this.addItem(this.state.input)}
             >
-              Add
+              Add Task
             </button>
           </div>
           <div className={s.posts}>
@@ -71,7 +71,7 @@ export class List extends Component {
                   key={index}
                 >
                   {item}
-                  <button onClick={() => this.deleteItem()}>Delete</button>
+                  {/* <button className={s.addedButton}>Added</button> */}
                 </li>
               ))}
             </ul>
