@@ -4,7 +4,12 @@ import s from "./List.module.css";
 export class List extends Component {
   state = {
     input: "",
-    listItems: [],
+    listItems: [
+      "Orger cupcakes",
+      "Send invitations",
+      "Book the clown",
+      "Rent a place for a party",
+    ],
   };
   onFormSubmit(e) {
     e.preventDefault();
@@ -28,13 +33,20 @@ export class List extends Component {
     item.classList.toggle(s.marked);
     console.log(item);
   }
+  deleteItems() {
+    let items = this.state.listItems;
+    items = [];
+    this.setState({ listItems: items });
+  }
+
   render() {
     return (
       <div>
-        <form onSubmit={this.onFormSubmit}>
-          <h1>Create new task</h1>
-          <div>
+        <form className={s.myPostBlock} onSubmit={this.onFormSubmit}>
+          <h1 className={s.headerText}>Create new task</h1>
+          <div className={s.textareaBlock}>
             <textarea
+              className={s.textarea}
               placeholder="add task"
               onChange={(e) => {
                 this.onChangeEvent(e.target.value);
@@ -42,17 +54,30 @@ export class List extends Component {
               value={this.state.input}
             ></textarea>
           </div>
-          <div>
-            <button onClick={() => this.addItem(this.state.input)}>Add</button>
+          <div className={s.buttonBlock}>
+            <button
+              className={s.buttonPublish}
+              onClick={() => this.addItem(this.state.input)}
+            >
+              Add
+            </button>
           </div>
-          <div>
-            <ul>
+          <div className={s.posts}>
+            <ul className={s.myPostBlock}>
               {this.state.listItems.map((item, index) => (
-                <li onClick={this.markedWord} key={index}>
+                <li
+                  className={s.postItemBlock}
+                  onClick={this.markedWord}
+                  key={index}
+                >
                   {item}
+                  <button onClick={() => this.deleteItem()}>Delete</button>
                 </li>
               ))}
             </ul>
+          </div>
+          <div>
+            <button onClick={() => this.deleteItems()}>Delete</button>
           </div>
         </form>
       </div>
