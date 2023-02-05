@@ -71,7 +71,6 @@ export class List extends Component {
                   key={index}
                 >
                   {item}
-                  {/* <button className={s.addedButton}>Added</button> */}
                 </li>
               ))}
             </ul>

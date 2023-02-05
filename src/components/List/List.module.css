@@ -6,7 +6,6 @@
   width: 100%;
   border: 1px #ece9e9 solid;
 }
-
 .postsBlock {
   padding: 20px;
   background-color: #f4f2f2;
@@ -55,15 +54,11 @@
 }
 .myPostBlock {
   display: flex;
-  /* flex-direction: row; */
   flex-direction: column;
   margin: auto 0;
   padding: 20px;
 }
 .postItemBlock {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between; */
   padding-top: 30px;
   padding-bottom: 30px;
   width: 100%;
