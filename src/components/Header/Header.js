@@ -1,9 +1,10 @@
 import { Component } from "react";
+import s from "./Header.module.css";
 
 export class Header extends Component {
   render() {
     return (
-      <div>
+      <div className={s.container}>
         <div>
           <h1>Organaze Maryia's Birthday</h1>
         </div>
