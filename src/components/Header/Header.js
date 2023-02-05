@@ -6,11 +6,11 @@ export class Header extends Component {
     return (
       <div className={s.container}>
         <div>
-          <h1>Organaze Maryia's Birthday</h1>
+          <h2>Organaze Maryia's Birthday</h2>
         </div>
         <div>
-          <h2>Type: personal</h2>
-          <h2>Due Fri 11 Aug 2023</h2>
+          <h3>Type: personal</h3>
+          <h3>Due Fri 11 Aug 2023</h3>
         </div>
       </div>
     );
