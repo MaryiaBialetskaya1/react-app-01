@@ -1,5 +1,5 @@
 .marked {
-  text-decoration: line-through 2px red;
+  text-decoration: line-through 2px #d90429;
   background-color: #f0f0f0;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -43,11 +43,17 @@
 .buttonPublish {
   background-color: #0b8ecd;
   border: solid 1px #0b8ecd;
-  padding: 5px;
+  padding: 15px;
   border-radius: 5px;
   color: #fdfdfd;
+  font-size: 20px;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
+  cursor: pointer;
+}
+.buttonPublish:hover {
+  background-color: #023047;
+  border: solid 1px #023047;
 }
 .posts {
   margin-top: 50px;
@@ -59,9 +65,32 @@
   padding: 20px;
 }
 .postItemBlock {
-  padding-top: 30px;
+  padding-top: 20px;
   padding-bottom: 30px;
   width: 100%;
   border: 1px #ece9e9 solid;
   list-style: none;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+.postItemBlock:hover {
+  background-color: #8ecae6;
+  cursor: pointer;
+  color: #fdfdfd;
+}
+.buttonDelete {
+  background-color: #ee6c4d;
+  border: solid 1px #ee6c4d;
+  padding: 15px;
+  border-radius: 5px;
+  color: #fdfdfd;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+}
+.buttonDelete:hover {
+  background-color: #d90429;
+  border: solid 1px #d90429;
 }

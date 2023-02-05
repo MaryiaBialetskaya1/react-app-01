@@ -41,7 +41,7 @@ export class List extends Component {
 
   render() {
     return (
-      <div>
+      <div className={s.listContainer}>
         <form className={s.myPostBlock} onSubmit={this.onFormSubmit}>
           <h1 className={s.headerText}>Create new task</h1>
           <div className={s.textareaBlock}>
@@ -76,7 +76,12 @@ export class List extends Component {
             </ul>
           </div>
           <div>
-            <button onClick={() => this.deleteItems()}>Delete</button>
+            <button
+              className={s.buttonDelete}
+              onClick={() => this.deleteItems()}
+            >
+              Delete
+            </button>
           </div>
         </form>
       </div>
